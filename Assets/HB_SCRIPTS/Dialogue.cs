@@ -5,43 +5,55 @@ using TMPro;
 public class Dialogue : MonoBehaviour
 {
     public string[] DialogueArray;
+    public bool[] isItalicArray; 
     public int DialogueIndex = 0;
     private TextMeshProUGUI _TextMeshPro;
     public Color[] textColor;
     private bool isTyping = false;
-    public float amountTime; // Adjust this to control the speed of typing effect
+    public float amountTime; 
 
-    // Start is called before the first frame update
     void Start()
     {
-        if (DialogueArray.Length > 0)
-        {
-            _TextMeshPro = GameObject.Find("Dialogue").GetComponent<TextMeshProUGUI>();
-            StartCoroutine(DisplayDialogue());
-        }
-        else
+        _TextMeshPro = GameObject.Find("Dialogue").GetComponent<TextMeshProUGUI>();
+
+        if (DialogueArray.Length == 0)
         {
             Debug.LogWarning("DialogueArray is empty!");
+            return;
         }
+
+        if (isItalicArray.Length != DialogueArray.Length)
+        {
+            Debug.LogWarning("isItalicArray length doesn't match DialogueArray length!");
+            return;
+        }
+
+        if (textColor.Length < DialogueArray.Length)
+        {
+            Debug.LogWarning("textColor array should be at least as long as DialogueArray!");
+        }
+
+        StartCoroutine(DisplayDialogue());
     }
 
-    // Coroutine to handle the letter-by-letter typing effect
     IEnumerator DisplayDialogue()
     {
         isTyping = true;
 
-        // Ensure we don't go out of bounds for DialogueArray or textColor
         if (DialogueIndex < DialogueArray.Length && DialogueIndex < textColor.Length)
         {
-            _TextMeshPro.text = ""; // Clear the current text
-            _TextMeshPro.color = textColor[DialogueIndex]; // Set the appropriate color
+            _TextMeshPro.text = "";
+            _TextMeshPro.color = textColor[DialogueIndex];
 
-            string currentDialogue = DialogueArray[DialogueIndex];
+            string currentText = DialogueArray[DialogueIndex];
+            bool italicThis = isItalicArray[DialogueIndex];
 
-            for (int i = 0; i < currentDialogue.Length; i++)
+            string displayText = italicThis ? "<i>" + currentText + "</i>" : currentText;
+
+            for (int i = 0; i < displayText.Length; i++)
             {
-                _TextMeshPro.text += currentDialogue[i]; // Add one character at a time
-                yield return new WaitForSeconds(amountTime); // Wait before showing the next character
+                _TextMeshPro.text += displayText[i];
+                yield return new WaitForSeconds(amountTime);
             }
         }
         else
@@ -49,20 +61,19 @@ public class Dialogue : MonoBehaviour
             Debug.LogWarning("DialogueIndex or textColor array is out of bounds!");
         }
 
-        isTyping = false; // Allow skipping when typing is done
+        isTyping = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && !isTyping)
         {
             DialogueIndex++;
-            if (DialogueIndex >= DialogueArray.Length) // Prevent going out of bounds
+            if (DialogueIndex >= DialogueArray.Length)
             {
-                DialogueIndex = 0; // Loop back to the first dialogue
+                DialogueIndex = 0;
             }
-            StartCoroutine(DisplayDialogue()); // Start displaying the next dialogue
+            StartCoroutine(DisplayDialogue());
         }
     }
 }
