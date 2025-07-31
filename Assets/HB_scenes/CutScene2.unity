@@ -387,30 +387,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DialogueArray:
   - '"Pleasure doin'' business with ya, Merodach."'
-  - '"'
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  isItalicArray: 00000000000000000000
+  - '"Yeah, yeah old man, take a bath next time."'
+  - The teen on the other side of the stall replied with a roll of her eyes.
+  - The old man opposite to her sighed. It had been years since the girl had lost
+    her home, now wandering the streets selling random stuff she finds during her
+    usual rounds to him.
+  - '"How''s your ma doin''?"'
+  - '"..She''s fine. I''ll see you tomorrow."'
+  - There was a bitter look on her face as she spoke, leaving no room for more conversation.
+  isItalicArray: 00000101000001
   DialogueIndex: 0
   textColor:
   - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0.495283, g: 1, b: 0.89884394, a: 1}
   - {r: 0.754717, g: 0.754717, b: 0.754717, a: 0.59607846}
   - {r: 0.754717, g: 0.754717, b: 0.754717, a: 0.59607846}
   - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0.49411765, g: 1, b: 0.8980392, a: 1}
   - {r: 0.7529412, g: 0.7529412, b: 0.7529412, a: 0.59607846}
   amountTime: 0.03
-  nextSceneName: Level_1
+  nextSceneName: Level_2
 --- !u!114 &337306633
 MonoBehaviour:
   m_ObjectHideFlags: 0
