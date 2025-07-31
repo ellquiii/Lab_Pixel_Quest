@@ -328,7 +328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.9009434, b: 0.9147122, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -889,25 +889,16 @@ MonoBehaviour:
   - '"Brooklyn Hospital?.. And yes, yes-I''m her partner, is there something wrong?"'
   - '"It''s nice to meet you, Sebastian. My name is Natalia Habian, I am a Medical
     Doctor at Brooklyn Hospital."'
-  - 'The words seemed to go out of one ear and out the other once he''d heard the
-    word hospital. With his heart beating fast in his chest, his brain had filtered
-    out any other words except for a few.    '
-  - This was a situation he'd never wished to encounter, especially with the name
-    of his partner coming out of the other person's lips on the line.
   - '"Around 8:30 A.M, earlier today, there was a report regarding a mass shooting
     incident in Euclid Avenue, I''m afraid Ms. Han Li was directly in the crossfire."'
   - Sebastian could feel his throat closing up, this was the last thing he wanted
     to hear, but surely-surely.. She was still alive.
-  - '"Is-is she okay?.."'
-  - Sebastian identified himself as a man that could control his emotions, but regardless
-    of his attempt to calm down, the aching feeling in his chest was gradually overwhelming
-    him, and his voice couldn't help but tremble, the words becoming hard to say.
   - '"Ms. Han Li is currently in unstable condition, I''d advise for you to come
     quickly. A loved one nearby may or may not help bring her back to stable condition
     before it''s too late-"'
   - Before the doctor could finish her sentence, the call was hung up on her, and
     the line went cold.
-  isItalicArray: 0000000000000101000100010001
+  isItalicArray: 00000000000000010001
   DialogueIndex: 0
   textColor:
   - {r: 1, g: 1, b: 1, a: 1}
@@ -916,11 +907,7 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 0.7830189, g: 0.5798772, b: 0.6299398, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 0.754717, g: 0.754717, b: 0.754717, a: 0.59607846}
-  - {r: 0.754717, g: 0.754717, b: 0.754717, a: 0.59607846}
   - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 0.7529412, g: 0.7529412, b: 0.7529412, a: 0.59607846}
-  - {r: 0.78431374, g: 0.5803922, b: 0.6313726, a: 1}
   - {r: 0.7529412, g: 0.7529412, b: 0.7529412, a: 0.59607846}
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 0.7529412, g: 0.7529412, b: 0.7529412, a: 0.59607846}
