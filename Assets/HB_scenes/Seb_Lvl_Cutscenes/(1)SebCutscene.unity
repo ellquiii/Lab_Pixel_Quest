@@ -972,7 +972,7 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 0.7529412, g: 0.7529412, b: 0.7529412, a: 0.59607846}
   amountTime: 0.03
-  nextSceneName: Level_1
+  nextSceneName: Level_1Seb
 --- !u!1 &1815572476
 GameObject:
   m_ObjectHideFlags: 0
