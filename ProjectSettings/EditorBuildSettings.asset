@@ -27,6 +27,18 @@ EditorBuildSettings:
     path: Assets/HB_scenes/Mer_Lvl_Cutscene/(1)MerCutscene.unity
     guid: fb82e5398749958418204f3d8850fd29
   - enabled: 1
+    path: Assets/HB_scenes/Mer_Lvl_Cutscene/Level_1Mer.unity
+    guid: 75f61bf833b4ab846a6b415ddf36a9ef
+  - enabled: 1
+    path: Assets/HB_scenes/Seb_Lvl_Cutscenes/(2)SebCutscene.unity
+    guid: d2cf1676c848ca848be3c8c8b37c67ad
+  - enabled: 1
     path: Assets/HB_scenes/Seb_Lvl_Cutscenes/Level_2Seb.unity
     guid: 488e68fc14dbd2845bec39ba9b656a92
+  - enabled: 1
+    path: Assets/HB_scenes/Mer_Lvl_Cutscene/(2)MerCutscene.unity
+    guid: 435bd3dc28b1a924d8f2858654525f7f
+  - enabled: 1
+    path: Assets/HB_scenes/Mer_Lvl_Cutscene/Level_2Mer.unity
+    guid: e45d1df395c48744cbf408ac3f3a30c5
   m_configObjects: {}
