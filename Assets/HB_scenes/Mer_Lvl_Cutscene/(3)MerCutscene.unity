@@ -464,23 +464,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DialogueArray:
-  - '"Hello, is this Sebastian?"'
-  - '"..Yes?"'
-  - '"Who''s speaking?"'
-  - '"This is a call from Brooklyn Hospital, do you know of a person named Meine
-    Han Li? She has you as her emergency contact number."'
-  - '"Brooklyn Hospital?.. And yes, yes-I''m her partner, is there something wrong?"'
-  - '"It''s nice to meet you, Sebastian. My name is Natalia Habian, I am a Medical
-    Doctor at Brooklyn Hospital."'
-  - '"Around 8:30 A.M, earlier today, there was a report regarding a mass shooting
-    incident in Euclid Avenue, I''m afraid Ms. Han Li was directly in the crossfire."'
-  - Sebastian could feel his throat closing up, this was the last thing he wanted
-    to hear, but surely-surely.. She was still alive.
-  - '"Ms. Han Li is currently in unstable condition, I''d advise for you to come
-    quickly. A loved one nearby may or may not help bring her back to stable condition
-    before it''s too late-"'
-  - Before the doctor could finish her sentence, the call was hung up on her, and
-    the line went cold.
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   isItalicArray: 00000000000000010001
   DialogueIndex: 0
   textColor:
