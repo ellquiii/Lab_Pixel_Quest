@@ -5,12 +5,15 @@ using TMPro;
 public class Dialogue : MonoBehaviour
 {
     public string[] DialogueArray;
-    public bool[] isItalicArray; 
+    public bool[] isItalicArray;
     public int DialogueIndex = 0;
     private TextMeshProUGUI _TextMeshPro;
     public Color[] textColor;
     private bool isTyping = false;
-    public float amountTime; 
+    public float amountTime;
+
+    [Header("Scene Transition")]
+    public string nextSceneName; // Set this in the Inspector
 
     void Start()
     {
@@ -69,10 +72,22 @@ public class Dialogue : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && !isTyping)
         {
             DialogueIndex++;
+
+            // Finished all lines
             if (DialogueIndex >= DialogueArray.Length)
             {
-                DialogueIndex = 0;
+                if (!string.IsNullOrEmpty(nextSceneName))
+                {
+                    SceneChanger.Instance.ChangeScene(nextSceneName);
+                    enabled = false; // prevent further input
+                }
+                else
+                {
+                    Debug.Log("Dialogue finished. No nextSceneName specified.");
+                }
+                return;
             }
+
             StartCoroutine(DisplayDialogue());
         }
     }
