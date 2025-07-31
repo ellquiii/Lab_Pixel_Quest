@@ -316,8 +316,8 @@ MonoBehaviour:
   - The teen on the other side of the stall replied with a roll of her eyes, a teasing
     smile on her chapped lips.
   - The old man opposite to her sighed with an amused smile. It had been years since
-    the girl had lost her home, now wandering the streets selling random stuff she
-    finds during her usual rounds to him.
+    the girl had lost her home, now wandering underground selling random stuff she
+    finds during her usual rounds.
   - '"How''s your ma doin''?"'
   - The smile previously on the girl's lips became strained.
   - '"..She''s fine. I''ll see you tomorrow."'
@@ -326,12 +326,12 @@ MonoBehaviour:
   DialogueIndex: 0
   textColor:
   - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 0.495283, g: 1, b: 0.89884394, a: 1}
+  - {r: 0.7311321, g: 1, b: 0.9139623, a: 1}
   - {r: 0.754717, g: 0.754717, b: 0.754717, a: 0.59607846}
   - {r: 0.754717, g: 0.754717, b: 0.754717, a: 0.59607846}
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 0.7529412, g: 0.7529412, b: 0.7529412, a: 0.59607846}
-  - {r: 0.49411765, g: 1, b: 0.8980392, a: 1}
+  - {r: 0.7294118, g: 1, b: 0.9137255, a: 1}
   - {r: 0.7529412, g: 0.7529412, b: 0.7529412, a: 0.59607846}
   amountTime: 0.03
   nextSceneName: Level_2
