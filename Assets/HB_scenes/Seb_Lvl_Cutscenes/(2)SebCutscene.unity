@@ -712,24 +712,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DialogueArray:
-  - '"Hello, is this Sebastian?"'
-  - '"..Yes?"'
-  - '"Who''s speaking?"'
-  - '"This is a call from Brooklyn Hospital, do you know of a person named Meine
-    Han Li? She has you as her emergency contact number."'
-  - '"Brooklyn Hospital?.. And yes, yes-I''m her partner, is there something wrong?"'
-  - '"It''s nice to meet you, Sebastian. My name is Natalia Habian, I am a Medical
-    Doctor at Brooklyn Hospital."'
-  - '"Around 8:30 A.M, earlier today, there was a report regarding a mass shooting
-    incident in Euclid Avenue, I''m afraid Ms. Han Li was directly in the crossfire."'
-  - Sebastian could feel his throat closing up, this was the last thing he wanted
-    to hear, but surely-surely.. She was still alive.
-  - '"Ms. Han Li is currently in unstable condition, I''d advise for you to come
-    quickly. A loved one nearby may or may not help bring her back to stable condition
-    before it''s too late-"'
-  - Before the doctor could finish her sentence, the call was hung up on her, and
-    the line went cold.
-  isItalicArray: 00000000000000010001
+  - With long and heavy breaths, he sat down on an empty seat. After running away
+    from what seemed like a mountain of husks, his phone began ringing incessantly.
+  - Sebastian's eyes scanned his phone, the same number that had called him earlier
+    calling him again.
+  - '"Yes? Do you have news for Meine?"'
+  - The words left his mouth as quickly as he pressed the 'accept' button.
+  - "\u201CSebastian, I'm calling to inform you that Ms. Han Li's condition is getting
+    worse by the minute\u2026 I'd advise you to come as soon as possible.\""
+  - '"Okay. I''ll get there as fast as I can."'
+  - The exhaustion from earlier seemed to dissipate with the news, replaced with
+    newfound vigor and determination.
+  isItalicArray: 01010001000001
   DialogueIndex: 0
   textColor:
   - {r: 1, g: 1, b: 1, a: 1}
@@ -739,9 +733,6 @@ MonoBehaviour:
   - {r: 0.7830189, g: 0.5798772, b: 0.6299398, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 0.7529412, g: 0.7529412, b: 0.7529412, a: 0.59607846}
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 0.7529412, g: 0.7529412, b: 0.7529412, a: 0.59607846}
   amountTime: 0.03
   nextSceneName: Level_1
 --- !u!114 &1671436584
