@@ -6,19 +6,19 @@ using TMPro;
 
 public class PlayerUIController : MonoBehaviour
 {
-    public Image heartImage;
+    public Image heart_Image;
     public TextMeshProUGUI coinText;
 
     // Start is called before the first frame update
     public void Start()
     {
-        heartImage = GameObject.Find("HeartImage").GetComponent<Image>();
+        heart_Image = GameObject.Find("HeartImage").GetComponent<Image>();
         coinText = GameObject.Find("CoinText").GetComponent<TextMeshProUGUI>();
     }
 
     public void UpdateHealth(float currentHealth, float maxHealth)
     {
-        heartImage.fillAmount = currentHealth / maxHealth;
+        heart_Image.fillAmount = currentHealth / maxHealth;
     }
 
     public void UpdateCoin(string newText)
