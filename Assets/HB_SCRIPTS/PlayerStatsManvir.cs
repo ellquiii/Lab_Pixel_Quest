@@ -8,15 +8,20 @@ public class PlayerStatsManvir : MonoBehaviour
     public int counter0 = 0;
     public int health0 = 100;
     public int maxHealth0 = 100;
-    public Transform RespawnPoint;
+    public Transform RespawnPoint0;
     private PlayerUIController playerUIControl0;
     string thisLevel0 = SceneManager.GetActiveScene().name;
+    private int coinsInLevel0 = 0;
+    private AudioController audioController0;
 
     // Start is called before the first frame update
     void Start()
     {
+        coinsInLevel0 = GameObject.Find("Coins").transform.childCount;
         playerUIControl0 = GetComponent<PlayerUIController>();
         playerUIControl0.UpdateHealth(health0, maxHealth0);
+        playerUIControl0.UpdateCoinText(counter + "/" + coinsInLevel);
+        //audioController0 = GetComponent<AudioController>();
     }
 
     // Update is called once per frame
@@ -61,15 +66,17 @@ public class PlayerStatsManvir : MonoBehaviour
                     playerUIControl0.UpdateHealth(health0, maxHealth0);
                     if (health0 <= 0)
                     {
-   
-                        SceneManager.UnloadSceneAsync(thisLevel0); // exists scene on death
+                        Application.Quit();
+                        //SceneManager.UnloadSceneAsync(thisLevel0);  exists scene on death
                     }
                     else
                     {
-                        SceneManager.LoadScene(thisLevel0); // starts from beginning of level 
+                        transform.position = RespawnPoint0.position;
+                        //SceneManager.LoadScene(thisLevel0);  starts from beginning of level 
                     }
                     break;
                 }
+                
             case "Finish":
                 {
                     SceneManager.LoadScene(nextLevel0);
@@ -81,17 +88,13 @@ public class PlayerStatsManvir : MonoBehaviour
                     Destroy(collision.gameObject);
                     break;
                 }
-            case "Health":
+
+             case "Respawn":
                 {
-                    if (health0 < 100)
-                    {
-                        health0+=10;
- 
-                        playerUIControl0.UpdateHealth(health0, maxHealth0);
-                        Destroy(collision.gameObject);
-                    }
-                    break;
+                 //audioController.PlayAudio("checkpoint");
+                   RespawnPoint0.position = collision.transform.Find("Point").position;
+                   break;
                 }
-        }
+        } // end of switch
     }
 }
