@@ -512,6 +512,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2316753118217855899, guid: eda4844e6ad5f4a4380bc936b19a7c2b, type: 3}
+      propertyPath: m_TagString
+      value: Coin
+      objectReference: {fileID: 0}
     - target: {fileID: 2601306533210773064, guid: eda4844e6ad5f4a4380bc936b19a7c2b, type: 3}
       propertyPath: m_Size.x
       value: 80
