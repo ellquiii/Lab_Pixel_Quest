@@ -23,7 +23,11 @@ public class PlayerStatsManvir : MonoBehaviour
         playerUIControl0 = GetComponent<PlayerUIController>();
         playerUIControl0.UpdateHealth(health0, maxHealth0);
         playerUIControl0.UpdateCoin(counter0 + "/" + coinsInLevel0);
+<<<<<<< Updated upstream
 
+=======
+        //audioController0 = GetComponent<AudioController>();
+>>>>>>> Stashed changes
     }
 
     // Update is called once per frame
