@@ -64,7 +64,7 @@ public class PlayerStatsManvir : MonoBehaviour
                 {
                     health0 -= 10;
    
-                    playerUIControl0.UpdateHealth(health0, maxHealth0);
+                    //playerUIControl0.UpdateHealth(health0, maxHealth0);
                     if (health0 <= 0)
                     {
                         Application.Quit();
