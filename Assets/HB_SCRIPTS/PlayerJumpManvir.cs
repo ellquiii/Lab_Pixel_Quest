@@ -19,6 +19,7 @@ public class PlayerJumpManvir : MonoBehaviour
 
     private string waterTag = "Water";
     private bool waterCheck;
+    private bool ladercheck;
     void Start()
     {
         gravityVector = new Vector2(0, Physics2D.gravity.y);
@@ -51,6 +52,7 @@ public class PlayerJumpManvir : MonoBehaviour
             waterCheck = true;
         }
     }
+
 
     private void OnTriggerExit2D(Collider2D collision)
     {
