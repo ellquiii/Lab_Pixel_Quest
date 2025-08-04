@@ -73,12 +73,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1466436694, guid: 0ca5de0f68d6ff6428a9cbbe006f5ab5, type: 3}
+  m_Sprite: {fileID: 61682666, guid: b55ae4928083fed48be5c6d2b1fd1588, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.32, y: 0.32}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -109,8 +109,8 @@ Transform:
   m_GameObject: {fileID: 6059132272097700774}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.015, y: -0.55, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.065, y: -1.69, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 829127724471978906}
@@ -128,8 +128,8 @@ GameObject:
   - component: {fileID: 1819316958673310660}
   - component: {fileID: 5985856356701885482}
   - component: {fileID: 4357631402691346900}
-  - component: {fileID: 618461171036563860}
   - component: {fileID: 8095959007423164396}
+  - component: {fileID: 1836841443308371440}
   m_Layer: 0
   m_Name: Sebastian
   m_TagString: Untagged
@@ -247,7 +247,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.007427454, y: 0.007427633}
+  m_Offset: {x: -0.05733776, y: -0.021686554}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -258,28 +258,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6286206, y: 1.1039861}
+  m_Size: {x: 1.4604597, y: 3.4081817}
   m_EdgeRadius: 0
---- !u!114 &618461171036563860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8251134764163299479}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 356e285bbc0bed04c9ebb9c5acecd52c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpForce: 6
-  fallForce: 2
-  CapsuleHeight: 0.25
-  CapsuleRadius: 0.08
-  feetCollider: {fileID: 868985726777771169}
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 128
 --- !u!114 &8095959007423164396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,3 +272,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c346635719eb66a40bbab250b26934d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1836841443308371440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8251134764163299479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10fecb650fb0aa4459441dd78be2ebc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: 6
+  fallForce: 2
+  CapsuleHeight: 0.25
+  CapsuleRadius: 0.08
+  feetCollider: {fileID: 868985726777771169}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 128

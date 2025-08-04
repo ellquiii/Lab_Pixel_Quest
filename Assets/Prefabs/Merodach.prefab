@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 3093335642914684810}
   - component: {fileID: 5831360919152584524}
   - component: {fileID: 7522929430402463068}
-  - component: {fileID: 5193335815401595937}
   - component: {fileID: 4821361401673594162}
+  - component: {fileID: 6162213054146936033}
   m_Layer: 0
   m_Name: Merodach
   m_TagString: Untagged
@@ -31,8 +31,8 @@ Transform:
   m_GameObject: {fileID: 807924388244968312}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.56, y: 1.37, z: 0.049949393}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -4.205, y: 0.443, z: 0.049949393}
+  m_LocalScale: {x: 1.229916, y: 1.4951919, z: 0.96464}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3024031616128488850}
@@ -132,7 +132,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.04456556, y: -0.002475977}
+  m_Offset: {x: 0.07687521, y: 0.54879045}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -143,28 +143,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6533792, y: 1.103986}
+  m_Size: {x: 1.2737226, y: 2.3745275}
   m_EdgeRadius: 0
---- !u!114 &5193335815401595937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 807924388244968312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 356e285bbc0bed04c9ebb9c5acecd52c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpForce: 6
-  fallForce: 2
-  CapsuleHeight: 0.25
-  CapsuleRadius: 0.08
-  feetCollider: {fileID: 3955170814534898321}
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 128
 --- !u!114 &4821361401673594162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,6 +157,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c346635719eb66a40bbab250b26934d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6162213054146936033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 807924388244968312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10fecb650fb0aa4459441dd78be2ebc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: 6
+  fallForce: 2
+  CapsuleHeight: 0.25
+  CapsuleRadius: 0.08
+  feetCollider: {fileID: 3955170814534898321}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &2749277619159051070
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,8 +202,8 @@ Transform:
   m_GameObject: {fileID: 2749277619159051070}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.55, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.01, y: -0.612, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4935951132542034955}
@@ -234,8 +234,8 @@ Transform:
   m_GameObject: {fileID: 3151109495989462622}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.0579, y: 3.4472, z: 1}
+  m_LocalPosition: {x: 0, y: 0.5497, z: 0}
+  m_LocalScale: {x: 2.4087079, y: 2.347888, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4935951132542034955}
@@ -281,12 +281,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 410156445, guid: 0ca5de0f68d6ff6428a9cbbe006f5ab5, type: 3}
+  m_Sprite: {fileID: -495046098, guid: b55ae4928083fed48be5c6d2b1fd1588, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.32, y: 0.32}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
