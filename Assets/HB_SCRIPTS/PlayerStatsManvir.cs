@@ -10,17 +10,18 @@ public class PlayerStatsManvir : MonoBehaviour
     public int maxHealth0 = 100;
     public Transform RespawnPoint0;
     private PlayerUIController playerUIControl0;
-    string thisLevel0 = SceneManager.GetActiveScene().name;
+    string thisLevel0;
     private int coinsInLevel0 = 0;
-    private AudioController audioController0;
+    //private AudioController audioController0;
 
     // Start is called before the first frame update
     void Start()
     {
-        coinsInLevel0 = GameObject.Find("Coins").transform.childCount;
+        thisLevel0 = SceneManager.GetActiveScene().name;
+        //coinsInLevel0 = GameObject.Find("Coins").transform.childCount;
         playerUIControl0 = GetComponent<PlayerUIController>();
         playerUIControl0.UpdateHealth(health0, maxHealth0);
-        playerUIControl0.UpdateCoinText(counter + "/" + coinsInLevel);
+        playerUIControl0.UpdateCoin(counter0 + "/" + coinsInLevel0);
         //audioController0 = GetComponent<AudioController>();
     }
 
