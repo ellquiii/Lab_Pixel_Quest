@@ -43,14 +43,18 @@ public class PlayerAnimation : MonoBehaviour
           
         }
 
-        if(Input.GetKeyDown(KeyCode.F))
-        {
-            animator.SetBool("IsAttacking", true);
-        }
+        //if(Input.GetKeyDown(KeyCode.F))
+        //{
+        //    animator.SetBool("IsAttacking", true);
+        //}
 
-        else
+        //else
+        //{
+        //    animator.SetBool("IsAttacking", false);
+        //}
+        if (Input.GetKeyDown(KeyCode.F))
         {
-            animator.SetBool("IsAttacking", false);
+            animator.SetTrigger("attack");
         }
     }
 }
