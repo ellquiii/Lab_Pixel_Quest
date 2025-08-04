@@ -36,9 +36,7 @@ public class PlayerStats : MonoBehaviour
         {
             case "Death":
                 {
-                    //Debug.Log("Player Has Died");
-                    //string thisLevel = SceneManager.GetActiveScene().name;
-                    //
+
                     health -= 10;
    
                     playerUIControl.UpdateHealth(health, maxHealth);
@@ -80,7 +78,7 @@ public class PlayerStats : MonoBehaviour
                 }
             case "Respawn":
                 {
-n;
+
                     break;
                 }
         }

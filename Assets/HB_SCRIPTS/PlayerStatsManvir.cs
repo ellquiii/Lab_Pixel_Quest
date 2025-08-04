@@ -4,35 +4,46 @@ using static GoalLevels;
 
 public class PlayerStatsManvir : MonoBehaviour
 {
-    public string nextLevel = "";
-    public int counter = 0;
-    public int health = 100;
-    public int maxHealth = 100;
+    public string nextLevel0 = "";
+    public int counter0 = 0;
+    public int health0 = 100;
+    public int maxHealth0 = 100;
     public Transform RespawnPoint;
-    private PlayerUIController playerUIControl;
-    string thisLevel = SceneManager.GetActiveScene().name;
+    private PlayerUIController playerUIControl0;
+    string thisLevel0 = SceneManager.GetActiveScene().name;
 
     // Start is called before the first frame update
     void Start()
     {
-        playerUIControl = GetComponent<PlayerUIController>();
-        playerUIControl.UpdateHealth(health, maxHealth);
+        playerUIControl0 = GetComponent<PlayerUIController>();
+        playerUIControl0.UpdateHealth(health0, maxHealth0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        switch (thisLevel)
+        switch (thisLevel0)
         {
-            case "Level_1Mer":
+            case "Level_1Seb":
                 {
-                    nextLevel = "Level_2Mer";
+                    nextLevel0 = "(1)MerCutScene";
                     break;
                 }
 
-            case "Level_1Seb":
+            case "Level_1Mer":
                 {
-                    nextLevel = "Level_2Seb";
+                    nextLevel0 = "(2)SebCutScene";
+                    break;
+                }
+            case "Level_2Seb":
+                {
+                    nextLevel0 = "(2)MerCutScene";
+                    break;
+                }
+
+            case "Level_2Mer":
+                {
+                    nextLevel0 = "(3)SebCutScene";
                     break;
                 }
         }
@@ -45,42 +56,38 @@ public class PlayerStatsManvir : MonoBehaviour
         {
             case "Death":
                 {
-                    //Debug.Log("Player Has Died");
-                    //string thisLevel = SceneManager.GetActiveScene().name;
-                    //
-                    health -= 10;
+                    health0 -= 10;
    
-                    playerUIControl.UpdateHealth(health, maxHealth);
-                    if (health <= 0)
+                    playerUIControl0.UpdateHealth(health0, maxHealth0);
+                    if (health0 <= 0)
                     {
    
-                        //SceneManager.LoadScene(thisLevel);
+                        SceneManager.UnloadSceneAsync(thisLevel0); // exists scene on death
                     }
                     else
                     {
-    
-                        SceneManager.LoadScene(thisLevel);
+                        SceneManager.LoadScene(thisLevel0); // starts from beginning of level 
                     }
                     break;
                 }
             case "Finish":
                 {
-                    SceneManager.LoadScene(nextLevel);
+                    SceneManager.LoadScene(nextLevel0);
                     break;
                 }
             case "Coin":
                 {
-                    counter++;
+                    counter0++;
                     Destroy(collision.gameObject);
                     break;
                 }
             case "Health":
                 {
-                    if (health < 3)
+                    if (health0 < 100)
                     {
-                        health++;
+                        health0+=10;
  
-                        playerUIControl.UpdateHealth(health, maxHealth);
+                        playerUIControl0.UpdateHealth(health0, maxHealth0);
                         Destroy(collision.gameObject);
                     }
                     break;

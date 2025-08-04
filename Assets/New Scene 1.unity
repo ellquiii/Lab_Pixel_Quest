@@ -392,6 +392,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 868985726777771169, guid: c2e94be12996634438b807f77028ee3a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.035
+      objectReference: {fileID: 0}
+    - target: {fileID: 868985726777771169, guid: c2e94be12996634438b807f77028ee3a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.703
+      objectReference: {fileID: 0}
     - target: {fileID: 8251134764163299479, guid: c2e94be12996634438b807f77028ee3a, type: 3}
       propertyPath: m_Name
       value: Sebastian
@@ -412,6 +420,14 @@ PrefabInstance:
     - target: {fileID: 807924388244968312, guid: 3d27613bdbd785640854243c45e04195, type: 3}
       propertyPath: m_Name
       value: Merodach
+      objectReference: {fileID: 0}
+    - target: {fileID: 3955170814534898321, guid: 3d27613bdbd785640854243c45e04195, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.069
+      objectReference: {fileID: 0}
+    - target: {fileID: 3955170814534898321, guid: 3d27613bdbd785640854243c45e04195, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.628
       objectReference: {fileID: 0}
     - target: {fileID: 4935951132542034955, guid: 3d27613bdbd785640854243c45e04195, type: 3}
       propertyPath: m_LocalPosition.x
