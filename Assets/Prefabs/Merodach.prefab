@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3654974376520230594}
   - component: {fileID: 8368510053527880204}
   - component: {fileID: 6128576183277006148}
+  - component: {fileID: 937226496492576545}
   m_Layer: 0
   m_Name: Merodach
   m_TagString: Untagged
@@ -164,7 +165,7 @@ MonoBehaviour:
   feetCollider: {fileID: 3955170814534898321}
   groundMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
 --- !u!114 &6128576183277006148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,7 +182,19 @@ MonoBehaviour:
   counter0: 0
   health0: 100
   maxHealth0: 100
-  RespawnPoint0: {fileID: 0}
+  RespawnPoint0: {fileID: 2326601488564786152, guid: 9fd22892fc26f614fb66522200fcf5a9, type: 3}
+--- !u!114 &937226496492576545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 807924388244968312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c346635719eb66a40bbab250b26934d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2749277619159051070
 GameObject:
   m_ObjectHideFlags: 0

@@ -20,7 +20,7 @@ public class PlayerStatsManvir : MonoBehaviour
         thisLevel0 = SceneManager.GetActiveScene().name;
         //coinsInLevel0 = GameObject.Find("Coins").transform.childCount;
         playerUIControl0 = GetComponent<PlayerUIController>();
-        playerUIControl0.UpdateHealth(health0, maxHealth0);
+       // playerUIControl0.UpdateHealth(health0, maxHealth0);
         playerUIControl0.UpdateCoin(counter0 + "/" + coinsInLevel0);
         //audioController0 = GetComponent<AudioController>();
     }
