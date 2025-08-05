@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class PlayerMovementManvir : MonoBehaviour
 {
-    private Rigidbody2D rb;
+    private Rigidbody2D rb1;
     public int xSpeed = 4;
-    private SpriteRenderer rbSprite;
+    private SpriteRenderer rbSprite1;
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        rbSprite = transform.Find("Sprite").GetComponent<SpriteRenderer>();
+        rb1 = GetComponent<Rigidbody2D>();
+        rbSprite1 = transform.Find("Sprite").GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -30,7 +30,7 @@ public class PlayerMovementManvir : MonoBehaviour
         float xInput = Input.GetAxis("Horizontal");
         //Debug.Log(xInput);
 
-        rb.velocity = new Vector2(xInput * xSpeed, rb.velocity.y);
+        rb1.velocity = new Vector2(xInput * xSpeed, rb1.velocity.y);
     }
 }
 

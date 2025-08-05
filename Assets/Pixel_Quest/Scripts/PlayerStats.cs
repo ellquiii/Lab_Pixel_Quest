@@ -21,7 +21,7 @@ public class PlayerStats1 : MonoBehaviour
         _playerUIController.UpdateHealth(_health, _maxHealth);
 
         coinsInLevel = GameObject.Find("Coins").transform.childCount;
-        _playerUIController.UpdateCoin(newText:_coinCounter + "/" + coinsInLevel);
+        _playerUIController.UpdateCoinText(newText:_coinCounter + "/" + coinsInLevel);
 
         switch(thisLevel)
         {
@@ -50,7 +50,7 @@ public class PlayerStats1 : MonoBehaviour
             case "Coin":
                 {
                     _coinCounter++;
-                    _playerUIController.UpdateCoin(newText: _coinCounter + "/" + coinsInLevel);
+                    _playerUIController.UpdateCoinText(newText: _coinCounter + "/" + coinsInLevel);
                     Destroy(other.gameObject);
                     break;
                 }

@@ -10,11 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 4935951132542034955}
   - component: {fileID: 162842387654260714}
-  - component: {fileID: 3093335642914684810}
   - component: {fileID: 5831360919152584524}
   - component: {fileID: 7522929430402463068}
-  - component: {fileID: 4821361401673594162}
-  - component: {fileID: 6162213054146936033}
+  - component: {fileID: 3654974376520230594}
+  - component: {fileID: 8368510053527880204}
+  - component: {fileID: 6128576183277006148}
+  - component: {fileID: 937226496492576545}
+  - component: {fileID: 5912143327650457265}
   m_Layer: 0
   m_Name: Merodach
   m_TagString: Untagged
@@ -30,9 +32,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 807924388244968312}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.205, y: 0.443, z: 0.049949393}
-  m_LocalScale: {x: 1.229916, y: 1.4951919, z: 0.96464}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -38.14, y: -3.44, z: 0.09813258}
+  m_LocalScale: {x: 0.50426555, y: 0.43902573, z: 0.93053037}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3024031616128488850}
@@ -60,19 +62,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3093335642914684810
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 807924388244968312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92f6c4db2a221c647b83df3120e55781, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  xSpeed: 4
 --- !u!50 &5831360919152584524
 Rigidbody2D:
   serializedVersion: 4
@@ -99,7 +88,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &7522929430402463068
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -145,7 +134,57 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.2737226, y: 2.3745275}
   m_EdgeRadius: 0
---- !u!114 &4821361401673594162
+--- !u!114 &3654974376520230594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 807924388244968312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92f6c4db2a221c647b83df3120e55781, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xSpeed: 4
+--- !u!114 &8368510053527880204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 807924388244968312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91c5a4ccea85a95418c805ac6342448b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: 9
+  fallForce: 2
+  CapsuleHeight: 0.25
+  CapsuleRadius: 0.08
+  feetCollider: {fileID: 3955170814534898321}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 128
+--- !u!114 &6128576183277006148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 807924388244968312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5773ba92dedaf54ebe18c69a3530b7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextLevel0: 
+  counter0: 0
+  health0: 100
+  maxHealth0: 100
+  RespawnPoint0: {fileID: 0}
+--- !u!114 &937226496492576545
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157,7 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c346635719eb66a40bbab250b26934d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6162213054146936033
+--- !u!114 &5912143327650457265
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -166,17 +205,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 807924388244968312}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10fecb650fb0aa4459441dd78be2ebc9, type: 3}
+  m_Script: {fileID: 11500000, guid: ea9802902f5649949b607720c2bc303f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 6
-  fallForce: 2
-  CapsuleHeight: 0.25
-  CapsuleRadius: 0.08
-  feetCollider: {fileID: 3955170814534898321}
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 128
+  heart_Image: {fileID: 0}
+  coinText: {fileID: 0}
+  stressBar: {fileID: 0}
 --- !u!1 &2749277619159051070
 GameObject:
   m_ObjectHideFlags: 0
