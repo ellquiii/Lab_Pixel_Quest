@@ -275,7 +275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 8
-  fallForce: 2
+  fallForce: 4
   CapsuleHeight: 0.25
   CapsuleRadius: 0.08
   feetCollider: {fileID: 868985726777771169}
