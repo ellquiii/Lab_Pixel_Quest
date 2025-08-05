@@ -958,7 +958,7 @@ MonoBehaviour:
     before it''s too late-"'
   - Before the doctor could finish her sentence, the call was hung up on her, and
     the line went cold.
-  isItalicArray: 00000000000000010001
+  isItalicArray: 00000000000000000001
   DialogueIndex: 0
   textColor:
   - {r: 1, g: 1, b: 1, a: 1}
@@ -971,7 +971,7 @@ MonoBehaviour:
   - {r: 0.7529412, g: 0.7529412, b: 0.7529412, a: 0.59607846}
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 0.7529412, g: 0.7529412, b: 0.7529412, a: 0.59607846}
-  amountTime: 0.03
+  amountTime: 0.003
   nextSceneName: Level_1Seb
 --- !u!1 &1815572476
 GameObject:
