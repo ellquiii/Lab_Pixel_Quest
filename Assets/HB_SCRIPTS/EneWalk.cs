@@ -31,13 +31,13 @@ public class EneWalk : MonoBehaviour
         if (!groundCheck)
         {
             direction *= -1;
-            transform.localScale = new Vector3(direction, 1, 1);
+            transform.localScale = new Vector3(direction * 4, 4, 4);
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         direction *= -1;
-        transform.localScale = new Vector3(direction, 1, 1);
+        transform.localScale = new Vector3(direction * 4, 4, 4);
     }
 }
