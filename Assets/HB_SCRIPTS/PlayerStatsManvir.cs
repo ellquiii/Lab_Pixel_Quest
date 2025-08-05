@@ -13,7 +13,7 @@ public class PlayerStatsManvir : MonoBehaviour
     private PlayerUIController playerUIControl0;
     string thisLevel0;
     private int coinsInLevel0 = 0;
-
+    //private AudioController audioController0;
 
     // Start is called before the first frame update
     void Start()
@@ -21,13 +21,9 @@ public class PlayerStatsManvir : MonoBehaviour
         thisLevel0 = SceneManager.GetActiveScene().name;
         coinsInLevel0 = GameObject.Find("Coins").transform.childCount;
         playerUIControl0 = GetComponent<PlayerUIController>();
-        playerUIControl0.UpdateHealth(health0, maxHealth0);
-        playerUIControl0.UpdateCoin(counter0 + "/" + coinsInLevel0);
-<<<<<<< Updated upstream
-
-=======
+        playerUIControl0.UpdateStress(maxHealth0-health0, maxHealth0);
+        playerUIControl0.UpdateCoinText(counter0 + "/" + coinsInLevel0);
         //audioController0 = GetComponent<AudioController>();
->>>>>>> Stashed changes
     }
 
     // Update is called once per frame
@@ -68,12 +64,13 @@ public class PlayerStatsManvir : MonoBehaviour
             case "Death":
                 {
                     health0 -= 10;
-
-                    playerUIControl0.UpdateHealth(health0, maxHealth0);
+                    playerUIControl0.UpdateStress(maxHealth0 - health0, maxHealth0);
+                    //playerUIControl0.UpdateHealth(health0, maxHealth0);
                     if (health0 <= 0)
                     {
-                        Application.Quit();
-                        //SceneManager.UnloadSceneAsync(thisLevel0);  exists scene on death
+                        SceneManager.LoadScene(thisLevel0);
+                        //Application.Quit();
+                        // SceneManager.UnloadSceneAsync(thisLevel0); // exists scene on death
                     }
                     else
                     {
@@ -82,7 +79,7 @@ public class PlayerStatsManvir : MonoBehaviour
                     }
                     break;
                 }
-
+                
             case "Finish":
                 {
                     SceneManager.LoadScene(nextLevel0);
@@ -91,15 +88,16 @@ public class PlayerStatsManvir : MonoBehaviour
             case "Coin":
                 {
                     counter0++;
+                    playerUIControl0.UpdateCoinText(counter0 + "/" + coinsInLevel0);
                     Destroy(collision.gameObject);
                     break;
                 }
 
-            case "Respawn":
+             case "Respawn":
                 {
-                    //audioController.PlayAudio("checkpoint");
-                    RespawnPoint0.position = collision.transform.Find("Point").position;
-                    break;
+                 //audioController.PlayAudio("checkpoint");
+                   RespawnPoint0.position = collision.transform.Find("Point").position;
+                   break;
                 }
         } // end of switch
     }

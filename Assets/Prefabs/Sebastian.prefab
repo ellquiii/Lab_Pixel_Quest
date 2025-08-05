@@ -109,7 +109,7 @@ Transform:
   m_GameObject: {fileID: 6059132272097700774}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.035, y: -1.703, z: 0}
+  m_LocalPosition: {x: -0.052, y: -1.71, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -128,8 +128,10 @@ GameObject:
   - component: {fileID: 1819316958673310660}
   - component: {fileID: 5985856356701885482}
   - component: {fileID: 4357631402691346900}
-  - component: {fileID: 8095959007423164396}
-  - component: {fileID: 1836841443308371440}
+  - component: {fileID: 7216215452793989985}
+  - component: {fileID: 2273646726004169667}
+  - component: {fileID: 1432091974367800619}
+  - component: {fileID: 2346961099289776995}
   m_Layer: 0
   m_Name: Sebastian
   m_TagString: Untagged
@@ -146,8 +148,8 @@ Transform:
   m_GameObject: {fileID: 8251134764163299479}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.192275, y: 1.2688363, z: 0.046579786}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -31.04, y: -0.99, z: 0.046579786}
+  m_LocalScale: {x: 0.35, y: 0.35, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4494131293191352113}
@@ -201,7 +203,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &5985856356701885482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,7 +262,44 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.4604597, y: 3.4081817}
   m_EdgeRadius: 0
---- !u!114 &8095959007423164396
+--- !u!114 &7216215452793989985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8251134764163299479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91c5a4ccea85a95418c805ac6342448b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: 8
+  fallForce: 2
+  CapsuleHeight: 0.25
+  CapsuleRadius: 0.08
+  feetCollider: {fileID: 868985726777771169}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 128
+--- !u!114 &2273646726004169667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8251134764163299479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5773ba92dedaf54ebe18c69a3530b7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextLevel0: 
+  counter0: 0
+  health0: 100
+  maxHealth0: 100
+  RespawnPoint0: {fileID: 0}
+--- !u!114 &1432091974367800619
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -272,7 +311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c346635719eb66a40bbab250b26934d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1836841443308371440
+--- !u!114 &2346961099289776995
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -281,14 +320,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 8251134764163299479}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10fecb650fb0aa4459441dd78be2ebc9, type: 3}
+  m_Script: {fileID: 11500000, guid: ea9802902f5649949b607720c2bc303f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 6
-  fallForce: 2
-  CapsuleHeight: 0.25
-  CapsuleRadius: 0.08
-  feetCollider: {fileID: 868985726777771169}
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 128
+  heart_Image: {fileID: 0}
+  coinText: {fileID: 0}
+  stressBar: {fileID: 0}

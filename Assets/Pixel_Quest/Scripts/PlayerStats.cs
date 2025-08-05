@@ -4,60 +4,69 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class PlayerStats : MonoBehaviour
+public class PlayerStats1 : MonoBehaviour
 {
     //public string nextLevel = "GeoLevel_2"
     public int _coinCounter = 0;
-    public int _health = 3;
-    public Transform RespawnPoint;
-    public int _maxHealth = 3;
+    public int _health = 100;
+    public int _maxHealth = 100;
     private PlayerUIController _playerUIController;
     private int coinsInLevel = 0;
+    public string nextLevel0 = "";
+        public string thisLevel;
 
-    private void Start()
+    private void Start1()
     {
         _playerUIController = GetComponent<PlayerUIController>();
         _playerUIController.UpdateHealth(_health, _maxHealth);
 
         coinsInLevel = GameObject.Find("Coins").transform.childCount;
-        _playerUIController.UpdateCoin(newText:_coinCounter + "/" + coinsInLevel);
+        _playerUIController.UpdateCoinText(newText:_coinCounter + "/" + coinsInLevel);
+
+        switch(thisLevel)
+        {
+            case "Level_1Mer":
+                    {
+                        nextLevel0 = "Level_2Mer";
+                        break;
+                    }
+            case "Level_1Seb":
+                {
+                    nextLevel0 = "Level_2SEb";
+                    break;
+                }
+        }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D0(Collider2D other)
     {
         switch (other.tag)
         {
-            case "Respawn":
-                {
-                    RespawnPoint.position = other.transform.Find("Point").position;
-                    break;
-                }
             case "Finish":
                 {
-                    string nextLevel = other.GetComponent<LevelGoals>().nextLevel;
-                    SceneManager.LoadScene(nextLevel);
+                    SceneManager.LoadScene(nextLevel0);
                     break;
                 }
             case "Coin":
                 {
                     _coinCounter++;
-                    _playerUIController.UpdateCoin(newText: _coinCounter + "/" + coinsInLevel);
+                    _playerUIController.UpdateCoinText(newText: _coinCounter + "/" + coinsInLevel);
                     Destroy(other.gameObject);
                     break;
                 }
             case "Health":
                 {
-                    if (_health < 3)
+                    if (_health < 100)
                     {
                         Destroy(other.gameObject);
-                        _health++;
+                        _health+=10;
                         _playerUIController.UpdateHealth(_health, _maxHealth);
                     }
                     break;
                 }
             case "Death":
                 {
-                    _health --;
+                    _health -= 10;
                     _playerUIController.UpdateHealth(_health, _maxHealth);
                     if (_health <= 0)
                     {
@@ -67,7 +76,7 @@ public class PlayerStats : MonoBehaviour
                     }
                     else
                     {
-                        transform.position = RespawnPoint.position;
+                        
                     }
                         break;
                 }
