@@ -56,5 +56,13 @@ public class PlayerAnimation : MonoBehaviour
         {
             animator.SetTrigger("attack");
         }
+
+        if(Input.GetKeyUp(KeyCode.W))
+        {
+            animator.SetTrigger("back");
+            animator.SetBool("IsFacingLeft", false);
+            animator.SetBool("IsFacingRight", false);
+
+        }
     }
 }
