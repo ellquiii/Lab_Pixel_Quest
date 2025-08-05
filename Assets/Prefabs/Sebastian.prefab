@@ -109,7 +109,7 @@ Transform:
   m_GameObject: {fileID: 6059132272097700774}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.065, y: -1.69, z: 0}
+  m_LocalPosition: {x: -0.052, y: -1.71, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 7216215452793989985}
   - component: {fileID: 2273646726004169667}
   - component: {fileID: 1432091974367800619}
+  - component: {fileID: 2346961099289776995}
   m_Layer: 0
   m_Name: Sebastian
   m_TagString: Untagged
@@ -147,8 +148,8 @@ Transform:
   m_GameObject: {fileID: 8251134764163299479}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.192275, y: 1.2688363, z: 0.046579786}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -31.04, y: -0.99, z: 0.046579786}
+  m_LocalScale: {x: 0.35, y: 0.35, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4494131293191352113}
@@ -273,14 +274,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c5a4ccea85a95418c805ac6342448b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 6
+  jumpForce: 8
   fallForce: 2
   CapsuleHeight: 0.25
   CapsuleRadius: 0.08
   feetCollider: {fileID: 868985726777771169}
   groundMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
 --- !u!114 &2273646726004169667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,3 +311,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c346635719eb66a40bbab250b26934d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2346961099289776995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8251134764163299479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea9802902f5649949b607720c2bc303f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heart_Image: {fileID: 0}
+  coinText: {fileID: 0}
+  stressBar: {fileID: 0}

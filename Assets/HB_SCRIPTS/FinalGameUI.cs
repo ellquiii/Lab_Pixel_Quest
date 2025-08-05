@@ -6,23 +6,16 @@ using TMPro;
 
 public class FinalGameUI : MonoBehaviour
 {
-    public Image heartImage;
-    public TextMeshProUGUI coinText;
+    public Image stressBar;
     // Start is called before the first frame update
-    public void StartUI()
+    public void Start()
     {
-        heartImage = GameObject.Find("HeartImage").GetComponent<Image>();
-        coinText = GameObject.Find("CoinText").GetComponent<TextMeshProUGUI>();
+        stressBar = GameObject.Find("StressBar").GetComponent<Image>();
     }
 
     // Update is called once per frame
-    public void UpdateHealth(float currentHealth, float maxHealth)
+    public void UpdateStress(float currentHealth, float maxHealth)
     {
-        heartImage.fillAmount = currentHealth / maxHealth;
-    }
-
-    public void UpdateCoin(string newText)
-    {
-        coinText.text = newText;
+        stressBar.fillAmount = maxHealth-currentHealth / maxHealth;
     }
 }

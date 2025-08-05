@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using static GoalLevels;
+using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
 
 public class PlayerStatsManvir : MonoBehaviour
 {
@@ -18,10 +19,10 @@ public class PlayerStatsManvir : MonoBehaviour
     void Start()
     {
         thisLevel0 = SceneManager.GetActiveScene().name;
-        //coinsInLevel0 = GameObject.Find("Coins").transform.childCount;
+        coinsInLevel0 = GameObject.Find("Coins").transform.childCount;
         playerUIControl0 = GetComponent<PlayerUIController>();
-       // playerUIControl0.UpdateHealth(health0, maxHealth0);
-       // playerUIControl0.UpdateCoin(counter0 + "/" + coinsInLevel0);
+        playerUIControl0.UpdateStress(maxHealth0-health0, maxHealth0);
+        playerUIControl0.UpdateCoinText(counter0 + "/" + coinsInLevel0);
         //audioController0 = GetComponent<AudioController>();
     }
 
@@ -63,12 +64,13 @@ public class PlayerStatsManvir : MonoBehaviour
             case "Death":
                 {
                     health0 -= 10;
-   
+                    playerUIControl0.UpdateStress(maxHealth0 - health0, maxHealth0);
                     //playerUIControl0.UpdateHealth(health0, maxHealth0);
                     if (health0 <= 0)
                     {
-                        Application.Quit();
-                        //SceneManager.UnloadSceneAsync(thisLevel0);  exists scene on death
+                        SceneManager.LoadScene(thisLevel0);
+                        //Application.Quit();
+                        // SceneManager.UnloadSceneAsync(thisLevel0); // exists scene on death
                     }
                     else
                     {
@@ -86,6 +88,7 @@ public class PlayerStatsManvir : MonoBehaviour
             case "Coin":
                 {
                     counter0++;
+                    playerUIControl0.UpdateCoinText(counter0 + "/" + coinsInLevel0);
                     Destroy(collision.gameObject);
                     break;
                 }
