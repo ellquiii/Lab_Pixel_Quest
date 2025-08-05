@@ -23,7 +23,7 @@ public class HW3PlayerDialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isSpeaking && Input.GetKeyDown(KeyCode.E))
+        if (isSpeaking && Input.GetKeyDown(KeyCode.F))
         {
             if (dialogue.Count - 1 == _talkIndex)
             {
@@ -36,7 +36,7 @@ public class HW3PlayerDialogue : MonoBehaviour
                 _talkText.text = dialogue[_talkIndex];
             }
         }
-        else if (canSpeak && Input.GetKeyDown(KeyCode.E))
+        else if (canSpeak && Input.GetKeyDown(KeyCode.F))
         {
             isSpeaking = true;
             _talkPanel.SetActive(true);
