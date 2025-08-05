@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/HB_scenes/Seb_Lvl_Cutscenes/Level_1Seb.unity
     guid: eeef4b95d755a294a976c3ba41540927
   - enabled: 1
+    path: Assets/HB_scenes/Credits.unity
+    guid: ef7e14f5ca99f7149b0be7c540a2482d
+  - enabled: 1
     path: Assets/HB_scenes/Mer_Lvl_Cutscene/(1)MerCutscene.unity
     guid: fb82e5398749958418204f3d8850fd29
   - enabled: 1
